@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Cinema.Views.UserCinemaControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:Cinema.ViewModels"
+             xmlns:local="clr-namespace:Cinema.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="130">
+    <UserControl.DataContext>
+        <vm:UserCInemaViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid>
+        <StackPanel Width="125">
+            <Button Command="{Binding BuyTicketsCommand}" Width="110" Margin="10">Buy Tickets</Button>
+            <Button Margin="10" Command="{Binding ToLobbieCommand}">Lobbie</Button>
+            <DockPanel Height="305">
+                <Button Margin="10" Command="{Binding LogoutCommand}" VerticalAlignment="Bottom">Logout</Button>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

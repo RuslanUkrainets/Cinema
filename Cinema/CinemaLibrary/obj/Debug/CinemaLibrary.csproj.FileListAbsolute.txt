@@ -1,0 +1,12 @@
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\bin\Debug\CinemaLibrary.dll.config
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\bin\Debug\CinemaLibrary.dll
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\bin\Debug\CinemaLibrary.pdb
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\bin\Debug\EntityFramework.dll
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\bin\Debug\EntityFramework.xml
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\obj\Debug\CinemaLibrary.csproj.CoreCompileInputs.cache
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\obj\Debug\CinemaLibrary.csproj.CopyComplete
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\obj\Debug\CinemaLibrary.dll
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\obj\Debug\CinemaLibrary.pdb
+C:\Users\torva\OneDrive\Programming\Entity Framework\Projects\Cinema\CinemaLibrary\obj\Debug\CinemaLibrary.csprojAssemblyReference.cache

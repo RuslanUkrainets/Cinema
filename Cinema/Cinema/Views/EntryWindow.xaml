@@ -1,0 +1,42 @@
+﻿<Window x:Class="Cinema.Views.EntryWindow"
+        x:Name="Entry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Cinema.ViewModels"
+        xmlns:local="clr-namespace:Cinema.Views"
+        mc:Ignorable="d"
+        Title="Register" Height="310" Width="250">
+    <Window.DataContext>
+        <vm:EntryViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel>
+            <DockPanel Margin="10">
+                <Label>Name:</Label>
+                <TextBox Text="{Binding Name}" HorizontalAlignment="Right" Width="130"></TextBox>
+            </DockPanel>
+            <DockPanel Margin="10">
+                <Label>Lastname:</Label>
+                <TextBox Text="{Binding Lastname}" HorizontalAlignment="Right" Width="130"></TextBox>
+            </DockPanel>
+            <DockPanel Margin="10">
+                <Label>Login:*</Label>
+                <TextBox Text="{Binding Login}" HorizontalAlignment="Right" Width="130"></TextBox>
+            </DockPanel>
+            <DockPanel Margin="10">
+                <Label>Password:*</Label>
+                <PasswordBox xmlns:ff="clr-namespace:Cinema.Infrastructure"
+                            ff:PasswordBoxAssistant.BindPassword="True"
+                            ff:PasswordBoxAssistant.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            HorizontalAlignment="Right" Width="130"/>
+            </DockPanel>
+            <DockPanel Margin="10">
+                <Label>Email:*</Label>
+                <TextBox Text="{Binding Email}" HorizontalAlignment="Right" Width="130"></TextBox>
+            </DockPanel>
+            <Button Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=Entry}" Margin="10" Height="25">Registration</Button>
+        </StackPanel>
+    </Grid>
+</Window>

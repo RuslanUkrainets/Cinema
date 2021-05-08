@@ -1,0 +1,71 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:Cinema.ViewModels"
+                    xmlns:v="clr-namespace:Cinema.Views"
+                    xmlns:local="clr-namespace:Cinema">
+    <DataTemplate x:Key="LobbieView" DataType="{x:Type vm:MainViewModel}">
+        <v:LobbieControl/>
+    </DataTemplate>
+    <DataTemplate x:Key="CinemaRoomView" DataType="{x:Type vm:MainViewModel}">
+        <v:CinemaRoomControl/>
+    </DataTemplate>
+    <DataTemplate x:Key="AddPerformanceView" DataType="{x:Type vm:MainViewModel}">
+        <v:AddPerformanceControl/>
+    </DataTemplate>
+    <DataTemplate x:Key="EditPerformanceView" DataType="{x:Type vm:MainViewModel}">
+        <v:EditPerformanceControl/>
+    </DataTemplate>
+    <DataTemplate x:Key="ReservesView" DataType="{x:Type vm:MainViewModel}">
+        <v:ReservesControl/>
+    </DataTemplate>
+    <DataTemplate x:Key="StatisticsView" DataType="{x:Type vm:MainViewModel}">
+        <v:StatisticsControl/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="NotLoginedView" DataType="{x:Type vm:MainViewModel}">
+        <v:NotLoginedControl/>
+    </DataTemplate>
+    <DataTemplate x:Key="UserCinemaView" DataType="{x:Type vm:MainViewModel}">
+        <v:UserCinemaControl/>
+    </DataTemplate>
+    <DataTemplate x:Key="ManagerView" DataType="{x:Type vm:MainViewModel}">
+        <v:ManagerControl/>
+    </DataTemplate>
+
+    <Style x:Key="SwichControl" TargetType="ContentControl">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding CurrentPage}" Value="0">
+                <Setter Property="ContentTemplate" Value="{StaticResource LobbieView}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding CurrentPage}" Value="1">
+                <Setter Property="ContentTemplate" Value="{StaticResource CinemaRoomView}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding CurrentPage}" Value="2">
+                <Setter Property="ContentTemplate" Value="{StaticResource AddPerformanceView}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding CurrentPage}" Value="3">
+                <Setter Property="ContentTemplate" Value="{StaticResource EditPerformanceView}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding CurrentPage}" Value="4">
+                <Setter Property="ContentTemplate" Value="{StaticResource ReservesView}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding CurrentPage}" Value="5">
+                <Setter Property="ContentTemplate" Value="{StaticResource StatisticsView}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="SwichEntry" TargetType="ContentControl">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding CurrentEntry}" Value="0">
+                <Setter Property="ContentTemplate" Value="{StaticResource NotLoginedView}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding CurrentEntry}" Value="1">
+                <Setter Property="ContentTemplate" Value="{StaticResource UserCinemaView}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding CurrentEntry}" Value="2">
+                <Setter Property="ContentTemplate" Value="{StaticResource ManagerView}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
